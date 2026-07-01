@@ -1,0 +1,23 @@
+{
+  "name": "forestdark-theme",
+  "displayName": "Forest Dark Theme",
+  "description": "Dark and light themes based on the forest green/teal palette",
+  "version": "1.0.0",
+  "publisher": "local",
+  "engines": { "vscode": "^1.60.0" },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Forest Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/forestdark-color-theme.json"
+      },
+      {
+        "label": "Forest Light",
+        "uiTheme": "vs",
+        "path": "./themes/forestlight-color-theme.json"
+      }
+    ]
+  }
+}
