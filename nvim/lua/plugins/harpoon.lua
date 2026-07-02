@@ -37,6 +37,10 @@ return {
         { desc = "Open harpoon window" })
       vim.keymap.set("n", "<C-p>", function() harpoon:list():prev() end)
       vim.keymap.set("n", "<C-n>", function() harpoon:list():next() end)
+
+      for i = 1, 4 do
+        vim.keymap.set("n", "<leader>" .. i, function() harpoon:list():select(i) end)
+      end
     end
   }
 }
