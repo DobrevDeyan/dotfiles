@@ -18,4 +18,21 @@ vim.opt.undofile = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
-vim.cmd.colorscheme("forestdark")
+local function is_dark_mode()
+  if vim.fn.has("mac") == 1 then
+    local ok, result = pcall(vim.fn.system, { "defaults", "read", "-g", "AppleInterfaceStyle" })
+    return ok and result:match("Dark") ~= nil
+  elseif vim.fn.has("win32") == 1 then
+    local ok, result = pcall(vim.fn.system, {
+      "reg", "query",
+      "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+      "/v", "AppsUseLightTheme",
+    })
+    return not (ok and result:match("0x1") ~= nil)
+  end
+  return true
+end
+
+local dark_mode = is_dark_mode()
+vim.o.background = dark_mode and "dark" or "light"
+vim.cmd.colorscheme(dark_mode and "forestdark" or "forestlight")
