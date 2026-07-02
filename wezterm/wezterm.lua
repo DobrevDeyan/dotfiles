@@ -83,6 +83,10 @@ config.keys = {
   { key = '9', mods = 'CTRL', action = wezterm.action.ActivateTab(-1) },
   { key = 'w', mods = 'CTRL', action = wezterm.action.CloseCurrentTab { confirm = true } },
   { key = 't', mods = 'CTRL', action = wezterm.action.SpawnTab('CurrentPaneDomain') },
+  -- Move tab left with Ctrl + Shift + Left Arrow
+  { key = 'LeftArrow', mods = 'CTRL|SHIFT', action = wezterm.action.MoveTabRelative(-1) },
+  -- Move tab right with Ctrl + Shift + Right Arrow
+  { key = 'RightArrow', mods = 'CTRL|SHIFT', action = wezterm.action.MoveTabRelative(1) },
 }
 
 return config
