@@ -110,8 +110,8 @@ end
 
 config.colors = scheme_for_appearance(get_appearance())
 
--- Tab bar
-config.use_fancy_tab_bar = true
+-- Tab bar (retro style honors colors.tab_bar; fancy tab bar ignores it and uses window_frame instead)
+config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 
 -- Shell (OS-specific)
