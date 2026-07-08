@@ -33,6 +33,4 @@ local function is_dark_mode()
   return true
 end
 
-local dark_mode = is_dark_mode()
-vim.o.background = dark_mode and "dark" or "light"
-vim.cmd.colorscheme(dark_mode and "forestdark" or "forestlight")
+vim.o.background = is_dark_mode() and "dark" or "light"

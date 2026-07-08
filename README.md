@@ -7,8 +7,6 @@ Cross-platform developer setup — macOS (zsh) and Windows (Cmder). Shared theme
 ```
 dotfiles/
 ├── nvim/                    # Neovim config (lazy.nvim, LSP, telescope, harpoon)
-│   ├── colors/
-│   │   └── forestdark.lua   # custom colorscheme
 │   ├── lua/
 │   │   ├── config/          # options, keymaps, lsp, lazy bootstrap
 │   │   └── plugins/         # one file per plugin group
@@ -73,10 +71,10 @@ WezTerm detects the OS at runtime (`wezterm.target_triple`) so the same file wor
 
 ## Theme
 
-**forestdark** — dark green/teal palette on black background.
+**Catppuccin** — Mocha (dark) / Latte (light), auto-selected from OS appearance.
 
-- Neovim: built-in colorscheme at `nvim/colors/forestdark.lua`
-- WezTerm: full ANSI + tab bar palette in `wezterm/wezterm.lua`
-- VS Code: install the extension from `vscode/forestdark-theme/` or activate via `install.ps1`
+- Neovim: `catppuccin/nvim` plugin, configured in `nvim/lua/plugins/colorscheme.lua`
+- WezTerm: builtin `Catppuccin Mocha` / `Catppuccin Latte` color schemes, selected in `wezterm/wezterm.lua`
+- VS Code: still ships the old `forestdark-theme` extension (`vscode/forestdark-theme/`) — not part of this change
 
 Font: **Mononoki Nerd Font** — installed automatically by both install scripts.

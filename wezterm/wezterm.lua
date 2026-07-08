@@ -10,7 +10,7 @@ config.window_background_opacity = 0.90
 config.window_decorations = "RESIZE"
 config.warn_about_missing_glyphs = false
 
--- Colors: same accents in both modes, background/text neutrals inverted for light
+-- Colors: Catppuccin, Mocha for dark mode / Latte for light mode
 local function get_appearance()
   if wezterm.gui then
     return wezterm.gui.get_appearance()
@@ -18,97 +18,7 @@ local function get_appearance()
   return "Dark"
 end
 
-local function scheme_for_appearance(appearance)
-  if appearance:find("Dark") then
-    return {
-      foreground    = "#d4d4d4",
-      background    = "#000000",
-      cursor_bg     = "#1adf96",
-      cursor_fg     = "#000000",
-      cursor_border = "#1adf96",
-      selection_fg  = "#000000",
-      selection_bg  = "#536359",
-      scrollbar_thumb = "#414d45",
-      split           = "#414d45",
-
-      ansi = {
-        "#232323",  -- black
-        "#95f2d0",  -- red
-        "#1adf96",  -- green
-        "#75a7a2",  -- yellow
-        "#568782",  -- blue
-        "#536359",  -- magenta
-        "#55ebb4",  -- cyan
-        "#d4d4d4",  -- white
-      },
-
-      brights = {
-        "#414d45",  -- bright black
-        "#95f2d0",  -- bright red
-        "#35e7a6",  -- bright green
-        "#b7d1ce",  -- bright yellow
-        "#8bb5b1",  -- bright blue
-        "#75efc2",  -- bright magenta
-        "#95f2d0",  -- bright cyan
-        "#ffffff",  -- bright white
-      },
-
-      tab_bar = {
-        background   = "#052b1d",
-        active_tab   = { bg_color = "#1adf96", fg_color = "#000000" },
-        inactive_tab = { bg_color = "#000000", fg_color = "#536359" },
-        inactive_tab_hover = { bg_color = "#052b1d", fg_color = "#d4d4d4" },
-        new_tab      = { bg_color = "#000000", fg_color = "#536359" },
-        new_tab_hover = { bg_color = "#052b1d", fg_color = "#d4d4d4" },
-      },
-    }
-  else
-    return {
-      foreground    = "#0a0a0a",
-      background    = "#D3D3D3",
-      cursor_bg     = "#1adf96",
-      cursor_fg     = "#D3D3D3",
-      cursor_border = "#1adf96",
-      selection_fg  = "#D3D3D3",
-      selection_bg  = "#536359",
-      scrollbar_thumb = "#A3B5AB",
-      split           = "#A3B5AB",
-
-      ansi = {
-        "#C4C4C4",  -- black
-        "#C13B2A",  -- red (was mint, invisible on light bg + indistinguishable from green in diffs)
-        "#0A7A4E",  -- green (darkened for contrast against off-white bg)
-        "#75a7a2",  -- yellow
-        "#568782",  -- blue
-        "#536359",  -- magenta
-        "#1D7A6B",  -- cyan (darkened for contrast against off-white bg)
-        "#0a0a0a",  -- white
-      },
-
-      brights = {
-        "#A3B5AB",  -- bright black
-        "#D6503D",  -- bright red
-        "#149E68",  -- bright green
-        "#b7d1ce",  -- bright yellow
-        "#8bb5b1",  -- bright blue
-        "#75efc2",  -- bright magenta
-        "#238577",  -- bright cyan
-        "#000000",  -- bright white
-      },
-
-      tab_bar = {
-        background   = "#C4C4C4",
-        active_tab   = { bg_color = "#1adf96", fg_color = "#D3D3D3" },
-        inactive_tab = { bg_color = "#D3D3D3", fg_color = "#536359" },
-        inactive_tab_hover = { bg_color = "#C4C4C4", fg_color = "#0a0a0a" },
-        new_tab      = { bg_color = "#D3D3D3", fg_color = "#536359" },
-        new_tab_hover = { bg_color = "#C4C4C4", fg_color = "#0a0a0a" },
-      },
-    }
-  end
-end
-
-config.colors = scheme_for_appearance(get_appearance())
+config.color_scheme = get_appearance():find("Dark") and "Catppuccin Mocha" or "Catppuccin Latte"
 
 -- Tab bar (retro style honors colors.tab_bar; fancy tab bar ignores it and uses window_frame instead)
 config.use_fancy_tab_bar = false
