@@ -109,7 +109,7 @@ hi(0, "Statement",       { fg = c.g2,   bold = true })
 hi(0, "Conditional",     { fg = c.g2,   bold = true })
 hi(0, "Repeat",          { fg = c.g2,   bold = true })
 hi(0, "Label",           { fg = c.g2 })
-hi(0, "Operator",        { fg = c.fg3 })         -- recedes
+hi(0, "Operator",        { fg = c.fg2 })
 hi(0, "Keyword",         { fg = c.g2,   bold = true })
 hi(0, "Exception",       { fg = c.red,  bold = true })
 hi(0, "PreProc",         { fg = c.t2 })
@@ -124,7 +124,7 @@ hi(0, "Typedef",         { fg = c.t2 })
 hi(0, "Special",         { fg = c.g4 })
 hi(0, "SpecialChar",     { fg = c.g3 })
 hi(0, "Tag",             { fg = c.fg0 })
-hi(0, "Delimiter",       { fg = c.fg3 })         -- recedes
+hi(0, "Delimiter",       { fg = c.fg2 })
 hi(0, "SpecialComment",  { fg = c.t4,   italic = true })
 hi(0, "Debug",           { fg = c.g5 })
 hi(0, "Underlined",      { underline = true })
@@ -149,12 +149,12 @@ hi(0, "@constructor",           { fg = c.t2 })
 hi(0, "@parameter",             { fg = c.t5 })            -- light blue-teal: distinct from vars
 hi(0, "@keyword",               { link = "Keyword" })
 hi(0, "@keyword.function",      { fg = c.g2,   bold = true })
-hi(0, "@keyword.operator",      { fg = c.fg3 })           -- recedes like other operators
+hi(0, "@keyword.operator",      { fg = c.fg2 })
 hi(0, "@keyword.return",        { fg = c.g2,   bold = true })
 hi(0, "@conditional",           { link = "Conditional" })
 hi(0, "@repeat",                { link = "Repeat" })
 hi(0, "@label",                 { link = "Label" })
-hi(0, "@operator",              { fg = c.fg3 })           -- recedes
+hi(0, "@operator",              { fg = c.fg2 })
 hi(0, "@exception",             { fg = c.red,  bold = true })
 hi(0, "@type",                  { fg = c.t2 })            -- teal: clearly ≠ keyword green
 hi(0, "@type.builtin",          { fg = c.t2,   bold = true })
@@ -168,8 +168,8 @@ hi(0, "@constant",              { fg = c.t5 })
 hi(0, "@constant.builtin",      { fg = c.red,  bold = true })
 hi(0, "@field",                 { fg = c.fg0 })           -- keys: near-white, neutral
 hi(0, "@property",              { fg = c.fg0 })           -- properties: near-white, neutral
-hi(0, "@punctuation.bracket",   { fg = c.fg3 })           -- recedes
-hi(0, "@punctuation.delimiter", { fg = c.fg3 })           -- recedes
+hi(0, "@punctuation.bracket",   { fg = c.fg2 })
+hi(0, "@punctuation.delimiter", { fg = c.fg2 })
 hi(0, "@punctuation.special",   { fg = c.muted })
 hi(0, "@tag",                   { fg = c.g2 })
 hi(0, "@tag.attribute",         { fg = c.t4 })

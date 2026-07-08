@@ -76,23 +76,23 @@ local function scheme_for_appearance(appearance)
 
       ansi = {
         "#E6EDE8",  -- black
-        "#95f2d0",  -- red
-        "#1adf96",  -- green
+        "#C13B2A",  -- red (was mint, invisible on light bg + indistinguishable from green in diffs)
+        "#0A7A4E",  -- green (darkened for contrast against off-white bg)
         "#75a7a2",  -- yellow
         "#568782",  -- blue
         "#536359",  -- magenta
-        "#55ebb4",  -- cyan
+        "#1D7A6B",  -- cyan (darkened for contrast against off-white bg)
         "#0a0a0a",  -- white
       },
 
       brights = {
         "#A3B5AB",  -- bright black
-        "#95f2d0",  -- bright red
-        "#35e7a6",  -- bright green
+        "#D6503D",  -- bright red
+        "#149E68",  -- bright green
         "#b7d1ce",  -- bright yellow
         "#8bb5b1",  -- bright blue
         "#75efc2",  -- bright magenta
-        "#95f2d0",  -- bright cyan
+        "#238577",  -- bright cyan
         "#000000",  -- bright white
       },
 
