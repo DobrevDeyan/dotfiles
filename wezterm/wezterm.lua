@@ -65,17 +65,17 @@ local function scheme_for_appearance(appearance)
   else
     return {
       foreground    = "#0a0a0a",
-      background    = "#F2F2ED",
+      background    = "#D3D3D3",
       cursor_bg     = "#1adf96",
-      cursor_fg     = "#F2F2ED",
+      cursor_fg     = "#D3D3D3",
       cursor_border = "#1adf96",
-      selection_fg  = "#F2F2ED",
+      selection_fg  = "#D3D3D3",
       selection_bg  = "#536359",
       scrollbar_thumb = "#A3B5AB",
       split           = "#A3B5AB",
 
       ansi = {
-        "#E6EDE8",  -- black
+        "#C4C4C4",  -- black
         "#C13B2A",  -- red (was mint, invisible on light bg + indistinguishable from green in diffs)
         "#0A7A4E",  -- green (darkened for contrast against off-white bg)
         "#75a7a2",  -- yellow
@@ -97,12 +97,12 @@ local function scheme_for_appearance(appearance)
       },
 
       tab_bar = {
-        background   = "#E6EDE8",
-        active_tab   = { bg_color = "#1adf96", fg_color = "#F2F2ED" },
-        inactive_tab = { bg_color = "#F2F2ED", fg_color = "#536359" },
-        inactive_tab_hover = { bg_color = "#E6EDE8", fg_color = "#0a0a0a" },
-        new_tab      = { bg_color = "#F2F2ED", fg_color = "#536359" },
-        new_tab_hover = { bg_color = "#E6EDE8", fg_color = "#0a0a0a" },
+        background   = "#C4C4C4",
+        active_tab   = { bg_color = "#1adf96", fg_color = "#D3D3D3" },
+        inactive_tab = { bg_color = "#D3D3D3", fg_color = "#536359" },
+        inactive_tab_hover = { bg_color = "#C4C4C4", fg_color = "#0a0a0a" },
+        new_tab      = { bg_color = "#D3D3D3", fg_color = "#536359" },
+        new_tab_hover = { bg_color = "#C4C4C4", fg_color = "#0a0a0a" },
       },
     }
   end

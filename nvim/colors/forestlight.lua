@@ -8,16 +8,16 @@ local hi = vim.api.nvim_set_hl
 
 -- Same palette as forestdark, background/text neutrals inverted to off-white/black
 local c = {
-  bg0    = "#F2F2ED",
-  bg1    = "#E6EDE8",
+  bg0    = "#D3D3D3",
+  bg1    = "#C8C8C8",
   bg2    = "#0b5f40",
-  bg3    = "#DAE5DC",
-  bg4    = "#BBCEC4",
-  bg5    = "#A3B5AB",
+  bg3    = "#BEBEBE",
+  bg4    = "#A8A8A8",
+  bg5    = "#8F8F8F",
   fg0    = "#0a0a0a",
   fg1    = "#1a1a1a",
   fg2    = "#555555",
-  fg3    = "#CDD9D0",
+  fg3    = "#BCBCBC",
   muted  = "#536359",
   red    = "#FF5733",
   g1     = "#16bf81",
