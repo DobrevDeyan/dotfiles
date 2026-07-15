@@ -17,6 +17,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.undofile = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.fixendofline = false
 
 local function is_dark_mode()
   if vim.fn.has("mac") == 1 then
