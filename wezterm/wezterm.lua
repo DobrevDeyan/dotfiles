@@ -9,6 +9,7 @@ config.font_size = 14.0
 config.window_background_opacity = 0.90
 config.window_decorations = "RESIZE"
 config.warn_about_missing_glyphs = false
+config.send_composed_key_when_left_alt_is_pressed = false
 
 -- Colors: Catppuccin, Mocha for dark mode / Latte for light mode
 local function get_appearance()
